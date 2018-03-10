@@ -14,6 +14,9 @@ async function test() {
   // request object that can be chained with if a request you need to make is not provided here.
   const projects = (await everhour.api.get("projects")).body;
 
+  // or, use the method
+  const projects = (await everhour.projects.list()).body;
+
   // everhour.tasks.for_project
   const tasks = (await everhour.tasks.for_project(project_id)).body;
 
